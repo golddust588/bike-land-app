@@ -1,4 +1,4 @@
-import { getAllbikes } from "./src/dataFetch.js";
+import { getAllBikes } from "./src/dataFetch.js";
 
 const bikesWrapper = document.getElementById('bikes-wrapper');
 
@@ -9,13 +9,13 @@ const buildBikeCard = (bike) => {
 
     const image = document.createElement("img");
     image.setAttribute("class", "bike-image");
-    image.src = bike.img_url;
+    image.src = bike.photo_url;
 
     const name = document.createElement("h1");
-    title.innerHTML = bike.name;
+    name.innerHTML = bike.name;
 
-    const price = document.createElement("p");
-    description.innerHTML = bike.price;
+    const price = document.createElement("h3");
+    price.innerHTML = `Price: ${bike.price} €`;
 
     wrapper.append(image);
     wrapper.append(name);
@@ -24,3 +24,15 @@ const buildBikeCard = (bike) => {
     return wrapper;
 };
 
+const fillCardsWithData = async() => {
+    const data = await getAllBikes();
+    data.sort((a, b) => {
+        return a.price - b.price;
+    });
+    data.forEach((bike) => {
+        const card = buildBikeCard(bike);
+        bikesWrapper.append(card);
+      });
+}
+
+fillCardsWithData();

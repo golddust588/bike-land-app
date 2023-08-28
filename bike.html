@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div>
+        <header>
+            <div class="logo">
+                Bike Land
+            </div>
+            <ul class="nav">
+                <li><a href="./index.html">All bikes</a></li>
+                <li><a href="#">Add new</a></li>
+            </ul>
+        </header>
+        <div class="main-container">
+            <div class="image-wrapper">
+                <img id="bike-page-image" class="bike-page-image" />
+            </div>
+            <div class="bike-info">
+                <h2 id="name" class="name"></h2>
+                <h3 id="location" class="location"></h3>
+                <h2 id="price" class="price"></h2>
+            </div>
+        </div>
+        <div class="description-container">
+            <h3>Description:</h3>
+            <p id="description"></p>
+            <button id="delete-button" class="delete-button">Delete</button>
+            <div class="info-message" id="info-message"></div>
+        </div>
+    </div>
+    <script src="./recipe.js"></script>
+</body>
+</html>

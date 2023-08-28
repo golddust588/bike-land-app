@@ -16,6 +16,7 @@ const buildBikeCard = (bike) => {
 
     const price = document.createElement("h3");
     price.innerHTML = `Price: ${bike.price} €`;
+    price.setAttribute("class", "price");
 
     wrapper.append(image);
     wrapper.append(name);

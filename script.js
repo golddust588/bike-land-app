@@ -1,4 +1,4 @@
-import { getAllBikes } from "./src/dataFetch.js";
+import { getAllBikes } from "./src/allBikesFetch.js";
 
 const bikesWrapper = document.getElementById('bikes-wrapper');
 

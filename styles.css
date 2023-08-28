@@ -63,4 +63,38 @@ header{
 
 .price{
     color: rgb(4, 94, 4);
+    font-style: italic;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.description-container{
+    width: 60%;
+    margin: auto;
+}
+
+.delete-button{
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    background-color: rgb(131, 28, 28);
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-button:hover{
+    background-color: rgb(223, 50, 50);
+}
+
+.info-message{
+    font-size: 1.2rem;
+    color: rgb(131, 28, 28);
+    margin-top: 2rem;
 }

@@ -1,4 +1,4 @@
-import { getBike, deleteBike } from "./src/dataFetch.js";
+import { getBike, deleteBike } from "./src/oneBikeFtech.js";
 
 
 const deleteButton = document.getElementById("delete-button");
@@ -14,7 +14,7 @@ const insertBikeToScreen = (bike) => {
     name.innerHTML = bike.name;
 
     const location = document.getElementById("location");
-    location.innerHTML = bike.location;
+    location.innerHTML = `City: ${bike.location}`;
 
     const price = document.getElementById("price");
     price.innerHTML = `Price: ${bike.price} €`;
@@ -23,11 +23,31 @@ const insertBikeToScreen = (bike) => {
     description.innerHTML = bike.description;
 }
 
+const onItemDeleted = (data) => {
+    const infoMessage = document.getElementById("info-message");
+    if (data) {
+      infoMessage.innerHTML = "Item was deleted";
+    } else {
+      infoMessage.innerHTML = "Item was NOT deleted, please try again later";
+    }
+};
+
+const onClickDeleteButton = async () => {
+    try {
+      const response = await deleteBike();
+      console.log(response);
+      onItemDeleted(response);
+    } catch (err) {
+      console.log(err);
+    }
+};
+
+deleteButton.addEventListener("click", onClickDeleteButton);
 
 const displayBike = async () => {
     const bike = await getBike();
     console.log(bike);
     bike && insertBikeToScreen(bike);
-}
+};
 
 displayBike();

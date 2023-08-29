@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div>
+        <header>
+            <div class="logo">
+                Bike Land
+            </div>
+            <ul class="nav">
+                <li><a href="./index.html">All bikes</a></li>
+            </ul>
+        </header>
+        <div class="form-container">
+            <input placeholder="Item's title:" id="item-title"/>
+            <input placeholder="Price:" id="item-price"/>
+            <input placeholder="Photo URL:" id="photo-url"/>
+            <input placeholder="Item's description:" id="item-description"/>
+            <input placeholder="Item's location (city):" id="item-location"/>
+            <button id="submit-button" class="submit-button">Add New Item</button>
+        </div>
+        <div id="submit-message" class="submit-message"></div>
+    </div>
+    <script src="./addNew.js"></script>
+</body>
+</html>

@@ -31,6 +31,11 @@ header{
     color: rgb(255, 255, 255);
     font-size: 1.2rem;
     font-weight: 600;
+    transition: 0.2s;
+}
+
+.nav li a:hover{
+    text-decoration:underline;
 }
 
 .bikes-wrapper{
@@ -121,10 +126,17 @@ header{
     background-color: rgb(75, 74, 74);
     color: lightgreen;
     font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.submit-button:hover{
+    background-color: rgb(124, 122, 122);
 }
 
 .submit-message{
     font-size: 1.2rem;
     color: (4, 94, 4);
     margin-top: 2rem;
+    text-align: center;
 }

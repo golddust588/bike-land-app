@@ -171,3 +171,9 @@ header{
         margin: 2rem 0;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .logo a{
+        font-size: 2rem;
+    }
+}

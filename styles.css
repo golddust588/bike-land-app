@@ -14,10 +14,11 @@ header{
 }
 
 
-.logo{
+.logo a{
     font-size: 3rem;
     color: lightgreen;
     font-style: italic;
+    text-decoration: none;
 }
 
 .nav{
@@ -43,7 +44,9 @@ header{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap:2rem;
     width: 90%;
+    max-width: 1500px;
     margin: auto;
+    justify-items: center;
 }
 
 .bike-wrapper{
@@ -139,4 +142,32 @@ header{
     color: (4, 94, 4);
     margin-top: 2rem;
     text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .bikes-wrapper{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .bikes-wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .bikes-wrapper{
+        grid-template-columns: 1fr;
+    }
+    .main-container{
+        flex-direction: column;
+        gap: 0;
+    }
+    .description-container{
+        text-align: center;
+    }
+    .price{
+        margin: 2rem 0;
+    }
 }

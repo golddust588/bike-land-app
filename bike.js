@@ -1,4 +1,4 @@
-import { getBike, deleteBike } from "./src/oneBikeFtech.js";
+import { getBike, deleteBike } from "./src/oneBikeFetch.js";
 
 
 const deleteButton = document.getElementById("delete-button");
@@ -6,7 +6,7 @@ const deleteButton = document.getElementById("delete-button");
 const url = new URL(window.location.href);
 export const bikeId = url.searchParams.get("id");
 
-const insertBikeToScreen = (bike) => {
+const insertItemToScreen = (bike) => {
     const bikeImage = document.getElementById("bike-page-image");
     bikeImage.src = bike.photo_url;
 
@@ -44,10 +44,9 @@ const onClickDeleteButton = async () => {
 
 deleteButton.addEventListener("click", onClickDeleteButton);
 
-const displayBike = async () => {
+const displayItem = async () => {
     const bike = await getBike();
-    console.log(bike);
-    bike && insertBikeToScreen(bike);
+    bike && insertItemToScreen(bike);
 };
 
-displayBike();
+displayItem();

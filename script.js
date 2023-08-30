@@ -2,7 +2,7 @@ import { getAllBikes } from "./src/allBikesFetch.js";
 
 const bikesWrapper = document.getElementById('bikes-wrapper');
 
-const buildBikeCard = (bike) => {
+const buildItemCard = (bike) => {
     const wrapper = document.createElement("a");
     wrapper.setAttribute("class", "bike-wrapper");
     wrapper.href = "./bike.html?id=" + bike.id;
@@ -31,7 +31,7 @@ const fillCardsWithData = async() => {
         return a.price - b.price;
     });
     data.forEach((bike) => {
-        const card = buildBikeCard(bike);
+        const card = buildItemCard(bike);
         bikesWrapper.append(card);
       });
 }
